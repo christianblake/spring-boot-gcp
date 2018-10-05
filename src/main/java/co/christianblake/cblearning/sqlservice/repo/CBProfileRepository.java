@@ -1,0 +1,9 @@
+package co.christianblake.cblearning.sqlservice.repo;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+@RepositoryRestResource
+public interface CBProfileRepository extends CrudRepository<CBProfile, Long>{
+
+}

@@ -1,0 +1,24 @@
+= Getting Started Guide
+The Team @ Christian Blake;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:sectlinks:
+
+[introduction]
+= Introduction
+
+Demonstration of a Google Cloud Microservice using the Spring Google Cloud framework.
+
+[getting-started-creating-a-profile]
+== Creating a Profile
+A `POST` request is used to create a note.
+
+operation::creating-valid[snippets='request-fields,curl-request,http-response']
+
+[getting-started-validation-errors]
+== Validation Errors
+The list of field validations is ask follows
+
+operation::creating-invalid[snippets='response-fields,curl-request,http-response']

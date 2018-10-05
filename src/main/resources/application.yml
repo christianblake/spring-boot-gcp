@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: googlecloudsqlservice
+  profiles:
+    active: live
+  jpa:
+    hibernate:
+      ddl-auto: create-drop  
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+         
+---
+
+spring:
+  profiles: live
+  cloud:
+    gcp:
+      sql:
+        instance-connection-name: christian-blake:us-central1:christian-blake-6
+        database-name: cb
+    
+---
+ 
+spring:
+  profiles: test
+  cloud:
+    gcp:
+      sql:
+        instance-connection-name: christian-blake:us-central1:christian-blake-6
+        database-name: cbtest
