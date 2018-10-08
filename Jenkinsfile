@@ -4,7 +4,7 @@ pipeline {
         maven 'maven'
   }
   environment {
-        GOOGLE_APPLICATION_CREDENTIALS = '/Users/christianblake/Documents/ChristianBlake/GoogleCloud/christian-blake-ffa1ebe7990c.json'
+        GOOGLE_APPLICATION_CREDENTIALS = '/Users/Shared/Jenkins/google/christian-blake-ffa1ebe7990c.json'
   }
   stages {
     stage('checkout project') {
