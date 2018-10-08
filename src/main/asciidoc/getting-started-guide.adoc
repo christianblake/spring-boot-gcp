@@ -1,5 +1,5 @@
 = Getting Started Guide
-The Team @ Christian Blake;
+The Team @ Christian Blake.;
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
