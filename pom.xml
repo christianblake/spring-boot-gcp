@@ -25,7 +25,9 @@
 		<spring-cloud-gcp.version>1.0.0.RELEASE</spring-cloud-gcp.version>
 		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
 		<spring-restdocs.version>2.0.2.RELEASE</spring-restdocs.version>
-		<version.number>${git.commit.time}.${git.commit.id.abbrev}</version.number>
+		<docker.image>gcr.io/christian-blake/cloudservice:${git.commit.time}.${git.commit.id.abbrev}</docker.image>
+		<jib.version>0.9.11</jib.version>
+		<ascii.version>1.5.3</ascii.version>
 	</properties>
 	
 	<dependencies>
@@ -104,15 +106,15 @@
         			</execution>
     			</executions>
     			<configuration>
-        			<dateFormat>yyyyMMdd-HHmmss</dateFormat><!--  human-readable part of the version number -->
+        			<dateFormat>yyyyMMdd-HHmmss</dateFormat>
         			<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-        			<generateGitPropertiesFile>false</generateGitPropertiesFile><!-- somehow necessary. otherwise the variables are not available in the pom -->
+        			<generateGitPropertiesFile>false</generateGitPropertiesFile>
     			</configuration>
 			</plugin>
  			<plugin>
         		<groupId>com.google.cloud.tools</groupId>
         		<artifactId>jib-maven-plugin</artifactId>
-        		<version>0.9.11</version>
+        		<version>${jib.version}</version>
   				<executions>
     				<execution>
       					<phase>package</phase>
@@ -123,14 +125,14 @@
   				</executions>
         		<configuration>
           			<to>
-            			<image>gcr.io/christian-blake/cloudservice:${version.number}</image>
+            			<image>${docker.image}</image>
           			</to>
         		</configuration>
       		</plugin>
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>1.5.3</version>
+				<version>${ascii.version}</version>
 				<executions>
 					<execution>
 						<id>generate-docs</id>
