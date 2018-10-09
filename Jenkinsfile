@@ -17,7 +17,7 @@ pipeline {
         	sh 'mvn clean test' 
        }
     }
-    stage ('Package') {
+    stage ('Package and Deploy to GC') {
     	steps {
         	sh 'mvn -DskipTests clean package' 
        }
