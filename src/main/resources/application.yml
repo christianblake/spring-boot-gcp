@@ -19,7 +19,7 @@ spring:
   cloud:
     gcp:
       sql:
-        instance-connection-name: christian-blake:us-central1:christian-blake-15
+        instance-connection-name: christian-blake:us-central1:christian-blake-16
         database-name: cb
     
 ---
@@ -29,5 +29,5 @@ spring:
   cloud:
     gcp:
       sql:
-        instance-connection-name: christian-blake:us-central1:christian-blake-15
+        instance-connection-name: christian-blake:us-central1:christian-blake-16
         database-name: cbtest
