@@ -19,7 +19,7 @@ pipeline {
     }
     stage ('Package and Deploy to GC') {
     	steps {
-        	sh 'mvn -DskipTests clean package' 
+        	sh 'mvn -DskipTests package' 
        }
     }
   }
